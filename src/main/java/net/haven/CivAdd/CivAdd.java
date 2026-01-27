@@ -104,7 +104,7 @@ public class CivAdd {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+        if (event.getTabKey() == EXAMPLE_TAB.getKey()) {
             event.accept(EXAMPLE_BLOCK_ITEM);
             event.accept(ModItems.COPPER_COIN);
         }
