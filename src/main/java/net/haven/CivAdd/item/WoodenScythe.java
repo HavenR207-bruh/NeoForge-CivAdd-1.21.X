@@ -29,7 +29,6 @@ public class WoodenScythe extends Item {
         super(properties);
         propertyinquestion = toolMaterial;
     }
-    @Override
     public InteractionResult useOn(UseOnContext context) {
         Level level = context.getLevel();
         Player player = context.getPlayer();

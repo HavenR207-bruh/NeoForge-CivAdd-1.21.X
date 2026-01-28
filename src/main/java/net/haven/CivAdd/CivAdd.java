@@ -2,6 +2,7 @@ package net.haven.CivAdd;
 
 import net.haven.CivAdd.item.ModItems;
 import net.haven.CivAdd.item.WoodenScythe;
+import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.*;
 import org.slf4j.Logger;
 
@@ -30,6 +31,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(CivAdd.MODID)
+
 public class CivAdd {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "civadd";
@@ -37,7 +39,7 @@ public class CivAdd {
     public static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
+//    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
     // Create a Deferred Register to hold Items which will all be registered under the "examplemod" namespace
     // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
@@ -45,20 +47,24 @@ public class CivAdd {
     // Creates a new Block with the id "examplemod:example_block", combining the namespace and path
     public static final DeferredBlock<Block> EXAMPLE_BLOCK = BLOCKS.registerSimpleBlock("example_block", p -> p.mapColor(MapColor.STONE));
     // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
-    public static final DeferredItem<BlockItem> EXAMPLE_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("example_block", EXAMPLE_BLOCK);
+//    public static final DeferredItem<BlockItem> EXAMPLE_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("example_block", EXAMPLE_BLOCK);
 
     // Creates a new food item with the id "examplemod:example_id", nutrition 1 and saturation 2
-    public static final DeferredItem<Item> EXAMPLE_ITEM = ITEMS.registerSimpleItem("example_item", p -> p.rarity(Rarity.UNCOMMON));
-    public static final DeferredItem<Item> WOODEN_SCYTHE = ITEMS.register("wooden_scythe",
-            () -> new WoodenScythe(new Item.Properties().hoe(ToolMaterial.WOOD, 1, -1).durability(100),ToolMaterial.WOOD));
+//    public static final DeferredItem<Item> EXAMPLE_ITEM = ITEMS.registerSimpleItem("example_item", p -> p.rarity(Rarity.UNCOMMON));
 
     // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.civadd")) //The language key for the title of your CreativeModeTab
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
+            .icon(() -> ModItems.COPPER_COIN.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-                output.accept(EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
+                output.accept(ModItems.COPPER_COIN.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
+                output.accept(ModItems.STONE_COIN.get());
+                output.accept(ModItems.COPPER_COIN.get());
+                output.accept(ModItems.IRON_COIN.get());
+                output.accept(ModItems.GOLD_COIN.get());
+                output.accept(ModItems.DIAMOND_COIN.get());
+//                output.accept(ModItems.WOODEN_SCYTHE.get());
             }).build());
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
@@ -70,7 +76,7 @@ public class CivAdd {
         // Register the Deferred Register to the mod event bus so blocks get registered
         BLOCKS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
-        ITEMS.register(modEventBus);
+//        ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
 
@@ -104,13 +110,7 @@ public class CivAdd {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == EXAMPLE_TAB.getKey()) {
-            event.accept(EXAMPLE_BLOCK_ITEM);
-            event.accept(ModItems.STONE_COIN);
-            event.accept(ModItems.COPPER_COIN);
-            event.accept(ModItems.IRON_COIN);
-            event.accept(ModItems.GOLD_COIN);
-            event.accept(ModItems.DIAMOND_COIN);
-            event.accept(WOODEN_SCYTHE);
+//            event.accept(EXAMPLE_BLOCK_ITEM);
         }
     }
 
