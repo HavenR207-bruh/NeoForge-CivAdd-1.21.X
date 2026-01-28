@@ -1,7 +1,6 @@
 package net.haven.CivAdd;
 
 import net.haven.CivAdd.item.ModItems;
-import net.haven.CivAdd.item.WoodenScythe;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.*;
 import org.slf4j.Logger;
