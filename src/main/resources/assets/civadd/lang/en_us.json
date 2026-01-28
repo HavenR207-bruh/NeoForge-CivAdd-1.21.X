@@ -2,6 +2,11 @@
   "itemGroup.civadd": "Example Mod Tab",
   "block.civadd.example_block": "Example Block",
   "item.civadd.example_item": "Example Item",
+  "item.civadd.copper_coin": "Copper Coin",
+  "item.civadd.stone_coin": "Stone Coin",
+  "item.civadd.iron_coin": "Iron Coin",
+  "item.civadd.gold_coin": "Gold Coin",
+  "item.civadd.diamond_coin": "Diamond Coin",
 
   "civadd.configuration.title": "Example Mod Configs",
   "civadd.configuration.section.civadd.common.toml": "Example Mod Configs",

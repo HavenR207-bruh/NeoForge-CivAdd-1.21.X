@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:stick",
+    },
+    "W": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "WWS",
+    " SW",
+    "S  "],
+  "result": {
+    "count": 1,
+    "id": "addciv:wooden_scythe"
+  }
+
+}
