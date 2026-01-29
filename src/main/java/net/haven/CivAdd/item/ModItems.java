@@ -47,6 +47,93 @@ public class ModItems {
 
 
     );
+
+    public static final DeferredItem<Item> StoneScythe = ITEMS.registerItem(
+            "stone_scythe",
+            ScytheItem::new,
+            () -> ScytheItem.scytheProperties(
+                    ToolMaterial.STONE,
+                    new Item.Properties(),
+                    5.0f,
+                    -3.3f,
+                    150
+
+            )
+
+
+    );
+
+    public static final DeferredItem<Item> CopperScythe = ITEMS.registerItem(
+            "copper_scythe",
+            ScytheItem::new,
+            () -> ScytheItem.scytheProperties(
+                    ToolMaterial.COPPER,
+                    new Item.Properties(),
+                    5.0f,
+                    -3.3f,
+                    150
+
+            )
+
+
+    );
+
+    public static final DeferredItem<Item> IronScythe = ITEMS.registerItem(
+            "iron_scythe",
+            ScytheItem::new,
+            () -> ScytheItem.scytheProperties(
+                    ToolMaterial.IRON,
+                    new Item.Properties(),
+                    5.0f,
+                    -3.3f,
+                    150
+
+            )
+
+
+    );
+
+    public static final DeferredItem<Item> GoldScythe = ITEMS.registerItem(
+            "gold_scythe",
+            ScytheItem::new,
+            () -> ScytheItem.scytheProperties(
+                    ToolMaterial.GOLD,
+                    new Item.Properties(),
+                    5.0f,
+                    -3.3f,
+                    150
+
+            )
+
+
+    );
+
+    public static final DeferredItem<Item> DiamondScythe = ITEMS.registerItem(
+            "diamond_scythe",
+            ScytheItem::new,
+            () -> ScytheItem.scytheProperties(
+                    ToolMaterial.DIAMOND,
+                    new Item.Properties(),
+                    5.0f,
+                    -3.3f,
+                    150
+
+            )
+
+
+    );
+
+    public static final DeferredItem<Item> NetheriteScythe = ITEMS.registerItem(
+            "netherite_scythe",
+            ScytheItem::new,
+            () -> ScytheItem.scytheProperties(
+            ToolMaterial.NETHERITE,
+            new Item.Properties(),
+            5.0f,
+            -3.3f,
+            150
+            )
+    );
 //    public static final DeferredItem<Item> WOODEN_SCYTHE = ITEMS.register("wooden_scythe", identifier -> new Item(new Item.Properties()));
 //            () -> new WoodenScythe(new Item.Properties().hoe(ToolMaterial.WOOD, 1, -1).durability(100),ToolMaterial.WOOD));
 

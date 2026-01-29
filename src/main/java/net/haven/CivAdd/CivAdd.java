@@ -1,8 +1,10 @@
 package net.haven.CivAdd;
 
 import net.haven.CivAdd.item.ModItems;
+import net.haven.CivAdd.item.custom.ScytheItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.*;
+import net.neoforged.neoforge.event.level.BlockEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -85,6 +87,8 @@ public class CivAdd {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+
+        ScytheItem.onCropBreak((BlockEvent.BreakEvent) modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

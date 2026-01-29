@@ -25,10 +25,7 @@
 //            ToolMaterial.DIAMOND,   5,
 //            ToolMaterial.NETHERITE, 6
 //            );
-//    public WoodenScythe(Properties properties,ToolMaterial toolMaterial) {
-//        super(properties);
-//        propertyinquestion = toolMaterial;
-//    }
+//
 //    public InteractionResult useOn(UseOnContext context) {
 //        Level level = context.getLevel();
 //        Player player = context.getPlayer();
